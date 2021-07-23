@@ -1,0 +1,15 @@
+.main{
+    overflow: auto;
+}
+
+.main-title{
+    background-color: #ddd;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+.main-txt{
+    margin-bottom: 30px;
+}
+.main-img img{
+    width: 100%;
+}

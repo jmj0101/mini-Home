@@ -1,0 +1,53 @@
+.home{
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+    flex-direction: column;
+}
+.home-head{
+    flex: 0.1;
+    color: violet;
+    font-weight: bold;
+    font-size: 20px;
+}
+.home-wrap{
+    flex: 1;
+    display: flex;
+}
+.home-row{
+    flex: 1;
+}
+.home-row li{
+    line-height: 30px;
+}
+.homerow-container{
+    display: flex;
+    line-height: 30px;
+}
+.homerow-item{
+    flex: 1;
+}
+.blue{
+    color: blue;
+}
+.nemo{
+    padding: 5px;
+    color: #fff;
+    margin-right: 5px;
+    border-radius: 5px;
+}
+.one{
+    background-color:tomato;
+}
+.two{
+    background-color: blueviolet;
+}
+.miniroom{
+    flex: 1;
+}
+.miniroom>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

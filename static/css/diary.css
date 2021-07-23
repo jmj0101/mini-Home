@@ -1,0 +1,85 @@
+.main{
+    display: flex;
+    flex-direction: column;
+}
+.datebox{
+    flex: 0.1;
+    display: flex;
+    margin-bottom: 15px;
+    padding: 5px;
+    border: 1px solid #aaa;
+    border-radius: 10px;
+}
+.today{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0.3;
+    color: rgb(221, 46, 46);
+    font-weight: bold;
+    text-align: center;
+}
+.date{
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    /* align-items: center; */
+    
+}
+.date>div{
+    flex: 0 0 1.5rem;
+    color: #707070;
+    cursor: pointer;
+    text-align: center;
+}
+.writebox{
+    flex: 1;
+    position: relative;
+    overflow: auto;
+}
+.wrap{
+    position: absolute;
+    width: 100%;
+}
+.container{
+    border: 1px solid #aaa;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+.item1{
+    margin-bottom: 10px;
+    color: rgb(221, 46, 46);
+    font-weight: bold;
+}
+.item2{
+    text-align: center;
+    line-height: 30px;
+}
+.date>div:nth-child(7n+3){
+    color: rgb(38, 58, 145);
+}
+.date>div:nth-child(7n+4){
+    color: rgb(221, 46, 46);
+}
+.secret{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.secret>button{
+    padding: 15px;
+    opacity: 0;
+    transition: 0.5s;
+}
+.secret>button{
+    background: cornflowerblue;
+    color: #fff;
+    border: 1px solid #333;
+}
+.secret>button:hover{
+    opacity: 1;
+}
+#secret-box{
+    display: none;
+}

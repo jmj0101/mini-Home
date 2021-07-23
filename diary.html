@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./static/css/layout.css">
+    <link rel="stylesheet" href="./static/css/font.css">
+    <link rel="stylesheet" href="./static/css/diary.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+<body>
+    <div class="cover">
+        <div class="dot">
+            <div class="page">
+                <div class="section1">
+                    <div class="total">
+                         TODAY <span class="red">77</span>|TOTAL930
+                    </div>
+
+                    <div class="profile">
+                        <div class="profile-wrap">
+                            <div class="profile-img">
+                                <img src="./static/img/dog.png" alt="img">
+                            </div>
+                            
+                            <div class="profile-txt">
+                                나는 있잖아요<br>
+                                그대에게 가장 먼저 떠오르는 사람이 되고 싶어요 <br>
+                                비오는 날의 우산처럼...
+                            </div>
+                        </div>
+
+                        <div class="profile-site">
+                            <div class="site-head">
+                                파도타기
+                                <div class="triangle"></div>
+                            </div>
+                            <div class="site-body">
+                                <a href="#">인스타그램</a>
+                                <a href="#">유튜브</a>
+                                <a href="#">페이스북</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section2">
+                    <div class="title">
+                        <div class="title-title">jmjºl ㅁı니홈ㅍı ☆</div>
+                        <div class="title-url">http://url주소/나중에 입력</div>
+                    </div>
+
+                    <div class="main">
+                        <div class="datebox">
+                            <div class="today">
+                                07.19<br> MON
+                            </div>
+                            <div class="date">
+                                <div>1</div>
+                                <div>2</div>
+                                <div>3</div>
+                                <div>4</div>
+                                <div>5</div>
+                                <div>6</div>
+                                <div>7</div>
+                                <div>8</div>
+                                <div>9</div>
+                                <div>10</div>
+                                <div>11</div>
+                                <div>12</div>
+                                <div>13</div>
+                                <div>14</div>
+                                <div>15</div>
+                                <div>16</div>
+                                <div>17</div>
+                                <div>18</div>
+                                <div>19</div>
+                                <div>20</div>
+                                <div>21</div>
+                                <div>22</div>
+                                <div>23</div>
+                                <div>24</div>
+                                <div>25</div>
+                                <div>26</div>
+                                <div>27</div>
+                                <div>28</div>
+                                <div>29</div>
+                                <div>30</div>
+                                <div>31</div>
+                            </div>
+                        </div>
+                        <div class="writebox">
+                            <div class="wrap">
+                                <div class="container">
+                                    <div class="item1">명언3</div>
+                                    <div class="item2">
+                                        더 위험한 것은 <br>
+                                        알면서 아무것도 하지 않는 것! <br>
+                                        <br>
+                                        -유재석-<br>
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <div class="item1">명언2</div>
+                                    <div class="item2">
+                                        하나를 얻으려면 <br>
+                                        아무리 좋아하는 것일지라도 <br>
+                                        하나는 포기해야 한다 <br>
+                                        <br>
+                                        -유재석-<br>
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <div class="item1">명언1</div>
+                                    <div class="item2">
+                                        늦었다고 생각할 때가 <br>
+                                        진짜 너무 늦었다 <br>
+                                        <br>
+                                        -박명수-<br>
+                                    </div>
+                                </div>
+                                <div class="container" id="secret-box">
+                                    <div class="item1">예시</div>
+                                    <div class="item2" id = "secret-diary"></div>
+                                </div>
+                                <div class="secret">
+                                    <button class ="diary-button" onclick="getTextFile()"><i class="fas fa-lock"> 비밀일기 보기</i></button>
+                                </div> 
+
+                            </div>
+    
+                        </div>
+                    </div>
+                        
+                </div>
+
+                <div class="section3">
+                    <ul>
+                        <li><a href="./home.html">홈</a></li>
+                        <li><a href="./diary.html">다이어리</a></li>
+                        <li><a href="./photo.html">사진첩</a></li>
+                        <li><a href="./guestbook.html">방명록</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script>
+        function getTextFile() {
+            var input = document.createElement("input");
+            input.type = "file";
+            input.accept = "text/plain";
+            input.onchange = function (event) {
+                processFile(event.target.files[0]);
+            };
+            input.click();
+        }
+
+        function processFile(file) {
+            var reader = new FileReader();
+            reader.readAsText(file, "utf-8");
+
+            reader.onload = function () {
+                document.getElementById("secret-diary").innerText = reader.result;
+                document.getElementById("secret-box").style.display = "block";
+            };
+        }
+    </script>
+</body>
+</html>

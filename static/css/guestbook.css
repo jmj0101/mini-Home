@@ -1,0 +1,42 @@
+.main{
+    overflow: auto;
+}
+.guest-box{
+    display: flex;
+    flex-direction: column;
+
+}
+.gb-title{
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #eee;
+    display: flex;
+}
+.gb-index{
+
+}
+.gb-body{
+    display: flex;
+    margin-bottom: 30px;
+}
+.gb-img{
+    flex: 0 0 10rem;
+    height: 200px;
+    
+}
+.gb-img>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.gb-txt{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.blue{
+    color: blue;
+    font-weight: bold;
+}
